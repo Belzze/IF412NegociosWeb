@@ -15,6 +15,19 @@
     $operador2= intval($_POST["txtOperador2"]);
     $resultado = "El resultado de restar ".$operador1." y ".$operador2." es ".($operador1 - $operador2);
   }
+  if(isset($_POST["btnMultiplicar"])){
+    $operador1 = intval($_POST["txtOperador1"]);
+    $operador2= intval($_POST["txtOperador2"]);
+    $resultado = "El resultado de multiplicar ".$operador1." y ".$operador2." es ".($operador1 * $operador2);
+  }
+  if(isset($_POST["btnDividir"])){
+    $operador1 = intval($_POST["txtOperador1"]);
+    $operador2= intval($_POST["txtOperador2"]);
+    if($operador2 == 0){
+    $resultado = "El dividendo no puede ser 0";
+  }else{$resultado = "El resultado de dividir ".$operador1." y ".$operador2." es ".($operador1 / $operador2);}
+
+  }
 
  ?>
  <!DOCTYPE html>
@@ -36,8 +49,9 @@
          <input type="submit" value="Sumar"
           name="btnSumar" id="btnSumar"/>
           &nbsp;
-          <input type="submit" value="Restar"
-           name="btnRestar" id="btnRestar"/>
+          <input type="submit" value="Restar"   name="btnRestar" id="btnRestar"/>
+           <input type="submit" name="btnMultiplicar" value="Multiplicar" id="btnMultiplicar">
+           <input type="submit" name="btnDividir" value="Dividir" id="btnDividir">
      </form>
      <hr />
      <div>
