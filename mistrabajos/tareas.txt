@@ -1,0 +1,23 @@
+rumaburguer
+
+tiene una promocion y solo se puede seleccionar 3 hamburguesas y solo uno de los 4 refrescos
+
+crear un formulario con 2 comboboxes una con 3 hamburguesas y con los 4 refrescos creados con una matriz
+el boton enviar orden imprimir abajo la hamburguesa y el refresco
+arreglo de la hamburguesa codigo,precio,nombre,imp,
+refrescos codigo,nombre,precio,imp,natural o soda
+y como bono hacer el calculo del total a pagar cuanto es el subtotal...los refrescos naturales no tiene impuesto y los de gas si
+las hamburguesas 2 tienen impuesto y una tiene carne A1 de japon del 32%
+
+
+funciones
+---------------
+escribir una funcion en php
+funtion nombredelafuncion($a,$b){   //$a y $b son los parametros que se le deben enviar
+
+
+con funciones crear
+una funcion que resiba el arreglo con la hamburguesa con el valor del atributo, codigo
+get combo (codigo, nombre, precio)
+
+}

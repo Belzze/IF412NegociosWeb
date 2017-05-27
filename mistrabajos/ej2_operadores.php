@@ -16,7 +16,7 @@
     $resultado = "El resultado de restar ".$operador1." y ".$operador2." es ".($operador1 - $operador2);
   }
   if(isset($_POST["btnMultiplicar"])){
-    $operador1 = intval($_POST["txtOperador1"]);
+    $operador1 = intval($_POST["txtOperador1"]);//es decir operador 1 es a variableentera que nos envie el txtOperador1 por el metodo post
     $operador2= intval($_POST["txtOperador2"]);
     $resultado = "El resultado de multiplicar ".$operador1." y ".$operador2." es ".($operador1 * $operador2);
   }

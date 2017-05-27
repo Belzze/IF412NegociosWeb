@@ -10,6 +10,7 @@
     for($i = $cmbIternaciones; $i > 0; $i--){//for($i = 0; $i < $cmbIternaciones; $i++)
       $resultado .= "<li>".$txtMensaje."</li>";
     }
+    //esto de arriba se reptine N veces y forma todos los li dentro de los ol
     /*
     while(expression){
 
