@@ -7,40 +7,40 @@
    "Precio"=>500,
    "Impuesto"=>.33
  );
- $arrayHamburguesa[] = array(
+ $arrayHamburguesa[] = Array(
    "Codigo"=>"2",
    "Descripcion"=>"Hamburguesa vegana",
    "Precio"=>150,
    "Impuesto"=>.15
  );
- $arrayHamburguesa[] = array(
+ $arrayHamburguesa[] = Array(
    "Codigo"=>"3",
    "Descripcion"=>"Hamburguesa con tocino",
    "Precio"=>250,
    "Impuesto"=>.15
  );
- $arrayRefresco[] = array(
+ $arrayRefresco[] = Array(
    "Codigo"=>"1",
    "Descripcion"=>"Cocacola",
    "Precio"=>25,
    "Tipo"=>"Soda",
    "Impuesto"=>.15
  );
- $arrayRefresco[] = array(
+ $arrayRefresco[] = Array(
    "Codigo"=>"2",
    "Descripcion"=>"Fresca",
    "Precio"=>25,
    "Tipo"=>"Soda",
    "Impuesto"=>.15
  );
- $arrayRefresco[] = array(
+ $arrayRefresco[] = Array(
    "Codigo"=>"3",
    "Descripcion"=>"Orchana",
    "Precio"=>20,
    "Tipo"=>"Natural",
    "Impuesto"=>0
  );
- $arrayRefresco[] = array(
+ $arrayRefresco[] = Array(
    "Codigo"=>"4",
    "Descripcion"=>"Nance",
    "Precio"=>20,
@@ -49,8 +49,9 @@
  );
 $total="";
 if (isset($_POST["btnFacturar"])) {
+  $total="<fieldset> <legend>Factura:</legend>";
   $cmbHamburguesas = intval($_POST["cmbHamburguesas"])-1;
-  $total = "Codigo de la hamburguesa:".$arrayHamburguesa[$cmbHamburguesas]["Codigo"]."</br>";
+  $total .= "Codigo de la hamburguesa:".$arrayHamburguesa[$cmbHamburguesas]["Codigo"]."</br>";
   $total .= $arrayHamburguesa[$cmbHamburguesas]["Descripcion"]."</br>";
   $total .= "Precio Hamburguesa: L".$arrayHamburguesa[$cmbHamburguesas]["Precio"]."</br>";
   $total .= "Impuesto Hamburguesa: L".$arrayHamburguesa[$cmbHamburguesas]["Impuesto"]*$arrayHamburguesa[$cmbHamburguesas]["Precio"]." El Impuesto es del:".$arrayHamburguesa[$cmbHamburguesas]["Impuesto"]*"100"."%</br>";
@@ -61,7 +62,8 @@ if (isset($_POST["btnFacturar"])) {
   $total .= "Impuesto Refresco:".$arrayRefresco[$cmbRefresco]["Impuesto"]*$arrayRefresco[$cmbRefresco]["Precio"]."</br>";
   $total .= "Tipo Refresco:".$arrayRefresco[$cmbRefresco]["Tipo"]."</br>";
   $total .= "<b></b>TOTAL A PAGAR: L".($arrayRefresco[$cmbRefresco]["Precio"] + $arrayHamburguesa[$cmbHamburguesas]["Precio"])."</b></br>";
-}
+$total .="</fieldset>";}
+
  /*foreach ($arrayHamburguesa as $venta) {
    echo "<br/>";
    echo $venta["Descripcion"]." |L".$venta["Precio"]."| Impuesto:L".$venta["Precio"]*$venta["Impuesto"];
@@ -76,6 +78,7 @@ if (isset($_POST["btnFacturar"])) {
      <title>Rumbaburguer</title>
    </head>
    <body>
+     <?php echo $arrayHamburguesa[1] ?>
      <h1>Menu Rumbaburger</h1>
      <h2>Seleccione una Hamburguesa</h2>
      <br>
@@ -96,11 +99,7 @@ if (isset($_POST["btnFacturar"])) {
       </form>
       <br>
       <div>
-        <fieldset>
-
-
         <?php echo $total; ?>
-          </fieldset>
       </div>
    </body>
  </html>

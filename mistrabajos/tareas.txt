@@ -4,6 +4,7 @@ tiene una promocion y solo se puede seleccionar 3 hamburguesas y solo uno de los
 
 crear un formulario con 2 comboboxes una con 3 hamburguesas y con los 4 refrescos creados con una matriz
 el boton enviar orden imprimir abajo la hamburguesa y el refresco
+
 arreglo de la hamburguesa codigo,precio,nombre,imp,
 refrescos codigo,nombre,precio,imp,natural o soda
 y como bono hacer el calculo del total a pagar cuanto es el subtotal...los refrescos naturales no tiene impuesto y los de gas si

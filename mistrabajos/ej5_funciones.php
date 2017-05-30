@@ -1,7 +1,8 @@
 <?php
-function sumarNumeros($a,$b){
-  return $a + $b;
-}
+  require_once("libreria.php");
+  $test = array();
+  $test[] = llenarArray('1',"Alejandro","hola2","hola3");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,6 +11,11 @@ function sumarNumeros($a,$b){
     <title>funciones</title>
   </head>
   <body>
-    <?php echo sumarNumeros(25,87); ?>
+    <?php
+    foreach ($test as $key) {
+      echo $key["Descripcion"];
+      # code...
+    }
+    ?>
   </body>
 </html>
